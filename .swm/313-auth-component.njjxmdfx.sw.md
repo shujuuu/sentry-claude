@@ -1,11 +1,11 @@
 ---
-title: Auth Component
+title: 3.1.3 Auth Component
 ---
-## 1\. Overview
+## Overview
 
 The Auth component in Sentry is responsible for managing user authentication and authorization. It ensures that only authorized users can access the Sentry platform and that they have the appropriate permissions for their actions. This component is crucial for maintaining the security and integrity of the Sentry system.
 
-## 2\. Key Features
+## Key Features
 
 - User authentication (login/logout)
 
@@ -21,7 +21,7 @@ The Auth component in Sentry is responsible for managing user authentication and
 
 - API token generation and validation
 
-## 3\. Architecture/Design
+## Architecture/Design
 
 The Auth component is designed with a modular architecture to support various authentication methods and integrate seamlessly with the rest of the Sentry system.
 
@@ -43,7 +43,7 @@ graph TD
     J --> L
 ```
 
-Key components:
+### Key components:
 
 - Auth Controller: Handles incoming authentication requests
 
@@ -57,7 +57,7 @@ Key components:
 
 - RBAC Store: Stores role and permission data
 
-## 4\. Usage/Implementation
+## Usage/Implementation
 
 To use the Auth component in Sentry:
 
@@ -66,24 +66,30 @@ To use the Auth component in Sentry:
 2. Implement authentication in views using decorators:
 
 ```
-python
+from sentry.auth import login_required @login_required def protected_view(request): # Your view logic here
 ```
-
-Copy
-
-`from sentry.auth import login_required @login_required def protected_view(request): # Your view logic here`
 
 3. Check permissions in views:
 
 ```
-python
+from sentry.auth import has_permission if has_permission(request.user, 'project:write', project): # Perform action requiring write permission
 ```
 
-Copy
+### Example Flow:
 
-`from sentry.auth import has_permission if has_permission(request.user, 'project:write', project): # Perform action requiring write permission`
+1. A user logs in to Sentry (handled by Auth)
 
-## 5\. Examples
+2. The Frontend renders the dashboard (Frontend)
+
+3. The dashboard needs to display recent errors, so it makes an API call (Frontend -> API)
+
+4. The API verifies the user's session and permissions (API -> Auth)
+
+5. If authorized, the API retrieves the data and returns it (API)
+
+6. The Frontend receives the data and updates the dashboard display (Frontend)
+
+## Examples
 
 ### Implementing SSO for a new provider:
 
@@ -96,14 +102,12 @@ from sentry.auth.providers.oauth2 import OAuth2Provider class NewSSOProvider(OAu
 2. Register the provider in `sentry/conf/server.py`:
 
 ```
-python
+SENTRY_AUTH_PROVIDERS = { # ... other providers ... 'new_sso_provider': 'sentry.auth.providers.new_sso_provider.NewSSOProvider', }
 ```
 
-Copy
+&nbsp;
 
-`SENTRY_AUTH_PROVIDERS = { # ... other providers ... 'new_sso_provider': 'sentry.auth.providers.new_sso_provider.NewSSOProvider', }`
-
-## 6\. Troubleshooting
+## Troubleshooting
 
 Common issues and solutions:
 
@@ -131,7 +135,7 @@ Common issues and solutions:
 
    - Verify that the permission check is implemented correctly in the view
 
-## 7\. Related Components
+## Related Components
 
 - User Management: Handles user profile information and account settings
 
@@ -140,6 +144,8 @@ Common issues and solutions:
 - Web Interface: Integrates with Auth for user login and session management
 
 - Audit Log: Records authentication and authorization events
+
+###
 
 &nbsp;
 
