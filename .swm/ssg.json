@@ -1,0 +1,39 @@
+{
+  "generator": "docusaurus",
+  "url": "https://example.test/",
+  "docs": {
+    "overview.t8jad8gh.sw.md": "Docs",
+    "313-auth-module-overview.njjxmdfx.sw.md": "Docs",
+    "test-saving-will-it-change.h5ofx3k0.sw.md": "Docs",
+    "sentry-frontend-module.bvfvuwxv.sw.md": "Docs",
+    "38-monitoring-sentrymonitoring.9raewosh.sw.md": "Docs",
+    "flow-frontend-rendering.u1f9rhgi.sw.md": "Docs",
+    "untitled-doc-4.rqibbgpd.sw.md": "Docs",
+    "tasks-sentrytasks.6s4lf1ow.sw.md": "Docs",
+    "auth.6ccvdaxz.sw.md": "Docs",
+    "37-notifications-sentrynotifications.7grhpk3c.sw.md": "Docs",
+    "32-models-overview-sentrymodels.eft70avm.sw.md": "Docs",
+    "flow-api-request-handling.5ezvu9x9.sw.md": "Docs",
+    "untitled-doc.hordkoav.sw.md": "Docs",
+    "sentry-api-module.dasru0v5.sw.md": "Docs",
+    "untitled-doc-3.6wp1th14.sw.md": "Docs",
+    "class-sentrycomponent.fdr0i8nr.sw.md": "Docs",
+    "34-search-sentrysearches.bfg917s9.sw.md": "Docs",
+    "35-integrations-sentryintegrations.6o37ninn.sw.md": "Docs",
+    "312-frontend-module-overview.kaqc27gp.sw.md": "Docs",
+    "flow-single-sign-on-sso-authentication.peegrxzz.sw.md": "Docs",
+    "class-authenticationbackend.l3cgijqk.sw.md": "Docs",
+    "flow-documentation-templates.64ectxow.sw.md": "Docs",
+    "class-apiview.2caxb5j7.sw.md": "Docs",
+    "class-doc-template.pkg42rto.sw.md": "Docs",
+    "modernization-dashboard.syb66d5b.sw.md": "Docs",
+    "sentry-codebase-modernization-dashboard.kvauog9b.sw.md": "Docs",
+    "overview-old.2i19euku.sw.md": "Docs",
+    "36-analytics-sentryanalytics.gbtsakuz.sw.md": "Docs",
+    "311-api-module-overview.n262jy6w.sw.md": "Docs"
+  },
+  "config": {
+    "title": "Swimm Docs",
+    "tagline": "Get started in minutes"
+  }
+}

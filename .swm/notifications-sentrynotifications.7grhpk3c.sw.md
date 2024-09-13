@@ -1,5 +1,5 @@
 ---
-title: 3.7 Notifications (sentry/notifications)
+title: Notifications (sentry/notifications)
 ---
 ### Overview:&nbsp;
 

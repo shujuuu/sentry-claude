@@ -1,5 +1,5 @@
 ---
-title: 3.4 Search (sentry/search)
+title: Search (sentry/searches)
 ---
 ### Overview:&nbsp;
 

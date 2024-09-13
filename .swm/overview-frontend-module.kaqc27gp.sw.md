@@ -1,9 +1,19 @@
 ---
-title: 3.1.2 Frontend module
+title: 'Overview: Frontend Module '
 ---
 ### Overview:&nbsp;
 
-The Frontend module handles the user interface of Sentry, built as a single-page application.
+The Frontend component is responsible for the user interface of Sentry. It's typically built as a single-page application (SPA) using modern web technologies.
+
+Key features:
+
+- Interactive dashboards for monitoring errors and performance
+
+- Project and team management interfaces
+
+- Issue tracking and resolution workflows
+
+- User account and settings management
 
 ### Key Classes:
 

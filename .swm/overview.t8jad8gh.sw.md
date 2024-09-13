@@ -3,151 +3,100 @@ title: Overview
 ---
 Sentry is an open-source error tracking and performance monitoring platform. It helps developers identify, triage, and resolve code errors and performance issues in real-time.
 
-## 2\. Architecture
+## Architecture
 
-Sentry's architecture consists of several key components:
+```mermaid
+graph TD
+    A[Sentry Demo] --> B[Web]
+    B --> B1[API]
+    B --> B2[Frontend]
+    B --> B3[Auth]
 
-1. SDK: Client-side libraries that capture errors and performance data
+    A --> C[Models]
+    A --> D[Task]
+    A --> E[Search]
+    A --> F[Integrations]
+    A --> G[Analytics]
+    A --> H[Notification]
+    A --> I[Monitoring]
+```
 
-2. Relay: Edge service that handles data ingestion and processing
+&nbsp;
 
-3. Web: User interface and API endpoints
+## Main and sub-modules
 
-4. Workers: Background task processors
+### 1\. Web&nbsp;
 
-5. Database: Stores project configurations and error data
-
-6. Search: Indexes and queries error events
-
-## 3\. Main and sub-modules
-
-### 3.1 Web&nbsp;
-
-Description: The Web module handles HTTP requests, renders the user interface, and provides API endpoints. You can read more at
-
-or look up the file inside it <SwmPath>[src/sentry/web/](/src/sentry/web/)</SwmPath>
+The Web module handles HTTP requests, renders the user interface, and provides API endpoints. Read in-depth documentation at <SwmLink doc-title="Web module">[Web module](/.swm/web-module.ieqty71c.sw.md)</SwmLink> or find module at <SwmPath>[src/sentry/web/](/src/sentry/web/)</SwmPath>
 
 Key Components:&nbsp;
 
-- <SwmLink doc-title="3.1.1 API module">[3.1.1 API module](/.swm/311-api-module.n262jy6w.sw.md)</SwmLink>
-- <SwmLink doc-title="3.1.2 Frontend module">[3.1.2 Frontend module](/.swm/312-frontend-module.kaqc27gp.sw.md)</SwmLink>
-- <SwmLink doc-title="3.1.3 Auth Component">[3.1.3 Auth Component](/.swm/313-auth-component.njjxmdfx.sw.md)</SwmLink>
+- API
+- Front-end
+- Auth&nbsp;
 
-### 3.2 Models&nbsp;
+### 2\. Models&nbsp;
 
-The Models module defines the database schema and object-relational mapping (ORM) for Sentry's data. You can read more at <SwmLink doc-title="Models (sentry/models)">[Models (sentry/models)](/.swm/models-sentrymodels.eft70avm.sw.md)</SwmLink> and look up the file inside it <SwmPath>[src/sentry/models/](/src/sentry/models/)</SwmPath>
+The Models module defines the database schema and object-relational mapping (ORM) for Sentry's data. You can read more at  <SwmLink doc-title="Models Overview (sentry/models)">[Models Overview (sentry/models)](/.swm/models-overview-sentrymodels.eft70avm.sw.md)</SwmLink> and look up the files inside <SwmPath>[src/sentry/models/](/src/sentry/models/)</SwmPath>
 
-### 3.3 Tasks&nbsp;
+Key Components:&nbsp;
 
-sources: <SwmPath>[src/sentry/dynamic_sampling/tasks/](/src/sentry/dynamic_sampling/tasks/)</SwmPath>
+- Core Models
+- Event Models
+- Identiry and Authentication Models
+- Integration Models
+- Configura Models
+- Monitoring Models
+- Release and Deployment Models
 
-### 3.4 Search&nbsp;
+### 3\. Tasks&nbsp;
 
-You can read more at <SwmLink doc-title="3.4 Search (sentry/search)">[3.4 Search (sentry/search)](/.swm/34-search-sentrysearch.bfg917s9.sw.md)</SwmLink>
+The Search module provides indexing and querying capabilities for Sentry data. Read more at <SwmLink doc-title="Tasks (sentry/tasks)">[Tasks (sentry/tasks)](/.swm/tasks-sentrytasks.6s4lf1ow.sw.md)</SwmLink> or work on the modules at <SwmPath>[src/sentry/dynamic_sampling/tasks/](/src/sentry/dynamic_sampling/tasks/)</SwmPath>
 
-sources: <SwmPath>[src/sentry/search/](/src/sentry/search/)</SwmPath>
+Key Components:&nbsp;
+
+- Event Processing
+- Notification Tasks
+- Data Cleanup
+- Integration Sync
+- Monitoring Tasks&nbsp;
+- Analytics Tasks
+- Scheduled Maintenance
+- Release Management
+
+### 4\. Search&nbsp;
+
+The Search module provides indexing and querying capabilities for Sentry data. You can read more at <SwmLink doc-title="Search (sentry/searches)">[Search (sentry/searches)](/.swm/search-sentrysearches.bfg917s9.sw.md)</SwmLink> or look for code sources at <SwmPath>[src/sentry/search/](/src/sentry/search/)</SwmPath>
 
 - Indexing&nbsp;
 - Query Engine
 
-### 3.5 Integrations&nbsp;
+### 5\. Integrations&nbsp;
 
-sources: <SwmPath>[src/sentry/integrations/](/src/sentry/integrations/)</SwmPath>
+The Integrations module manages connections between Sentry and external services. Read more at <SwmLink doc-title="Integrations (sentry/integrations)">[Integrations (sentry/integrations)](/.swm/integrations-sentryintegrations.6o37ninn.sw.md)</SwmLink> and find its modules at  <SwmPath>[src/sentry/integrations/](/src/sentry/integrations/)</SwmPath>
 
 - Third-party Services&nbsp;
-- Plugins <SwmPath>[src/sentry/plugins/](/src/sentry/plugins/)</SwmPath>
+- Plugins&nbsp;
 
-### 3.6 Analytics&nbsp;
+### 6\. Analytics&nbsp;
 
-sources: <SwmPath>[src/sentry/analytics/](/src/sentry/analytics/)</SwmPath>
+The Analytics module tracks usage and generates insights about Sentry usage. Read more at <SwmLink doc-title="Analytics (sentry/analytics)">[Analytics (sentry/analytics)](/.swm/analytics-sentryanalytics.gbtsakuz.sw.md)</SwmLink> and look out for its code sources at <SwmPath>[src/sentry/analytics/](/src/sentry/analytics/)</SwmPath>
 
 - Event Processing&nbsp;
 - Reporting
 
-### 3.7 Notification
+### 7\. Notification
+
+The Notifications module manages the sending of alerts and updates to users. Read about the module at <SwmLink doc-title="Notifications (sentry/notifications)">[Notifications (sentry/notifications)](/.swm/notifications-sentrynotifications.7grhpk3c.sw.md)</SwmLink> <SwmPath>[src/sentry/notifications/](/src/sentry/notifications/)</SwmPath>
 
 - Email&nbsp;
 - Webhooks
 
-### 3.8 Monitoring&nbsp;
+### 8\. Monitoring&nbsp;
 
-Source: <SwmPath>[src/sentry/monitoring/](/src/sentry/monitoring/)</SwmPath>, <SwmPath>[src/sentry/monitors/](/src/sentry/monitors/)</SwmPath>
+The Monitoring module tracks the health and performance of Sentry itself. Read about the module at <SwmLink doc-title="Monitoring (sentry/monitoring)">[Monitoring (sentry/monitoring)](/.swm/monitoring-sentrymonitoring.9raewosh.sw.md)</SwmLink> and look for code sources at <SwmPath>[src/sentry/monitoring/](/src/sentry/monitoring/)</SwmPath>, <SwmPath>[src/sentry/monitors/](/src/sentry/monitors/)</SwmPath>
 
 - Performance&nbsp;
 - Alerts
-
----
-
-&nbsp;
-
-## 5\. Interesting Flows
-
-5.1 Error Ingestion Process&nbsp;
-
-5.2 Issue Grouping&nbsp;
-
-5.3 Alert Notifications&nbsp;
-
-5.4 Search Functionality&nbsp;
-
-5.5 User Authentication Flow
-
----
-
-&nbsp;
-
-## 6\. Development Guide
-
-6.1 Setting Up Development Environment&nbsp;
-
-6.2 Running Tests&nbsp;
-
-6.3 Contributing Guidelines
-
----
-
-&nbsp;
-
-## 7\. API Reference
-
-7.1 REST API&nbsp;
-
-7.2 SDK APIs
-
----
-
-&nbsp;
-
-## 8\. Deployment
-
-8.1 Self-Hosted Deployment&nbsp;
-
-8.2 Cloud Deployment Options
-
----
-
-##
-
-### Detailed References
-
-## 11\. Detailed References
-
-11.1 Classes&nbsp;
-
-- \[GroupedByModule\]&nbsp;
-
-11.2 Flows
-
-- \[GroupedByFunctionality\]
-
----
-
-&nbsp;
-
-## Appendix
-
-A. Glossary&nbsp;
-
-B. Additional Resources
 
 <SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBc2VudHJ5LWNsYXVkZSUzQSUzQXNodWp1dXU=" repo-name="sentry-claude"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

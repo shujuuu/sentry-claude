@@ -1,5 +1,5 @@
 ---
-title: 3.5 Integrations (sentry/integrations)
+title: Integrations (sentry/integrations)
 ---
 ### Overview:&nbsp;
 

@@ -1,10 +1,6 @@
 ---
-title: Models (sentry/models)
+title: Models-old
 ---
-### Overview:&nbsp;
-
-The Models module defines the database schema and object-relational mapping for Sentry's data.
-
 ### Key Classes:
 
 - Project
@@ -24,6 +20,8 @@ The Models module defines the database schema and object-relational mapping for 
   - Purpose: Represents an error or transaction event
 
   - Key Fields: project, group, message, datetime
+
+&nbsp;
 
 ### Key Flows:
 

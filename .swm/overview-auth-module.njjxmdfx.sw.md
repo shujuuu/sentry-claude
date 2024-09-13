@@ -1,5 +1,5 @@
 ---
-title: 3.1.3 Auth Component
+title: 'Overview: Auth Module'
 ---
 ## Overview
 
@@ -9,7 +9,7 @@ The Auth component in Sentry is responsible for managing user authentication and
 
 - User authentication (login/logout)
 
-- Single Sign-On (SSO) support
+- Single Sign-On (SSO) support -&nbsp;
 
 - Two-Factor Authentication (2FA)
 
@@ -74,6 +74,18 @@ from sentry.auth import login_required @login_required def protected_view(reques
 ```
 from sentry.auth import has_permission if has_permission(request.user, 'project:write', project): # Perform action requiring write permission
 ```
+
+### How These Components Interact:
+
+1. When a user accesses Sentry through a web browser, the Frontend component renders the initial page and handles subsequent user interactions.
+
+2. As the user interacts with the UI, the Frontend makes API calls to the backend to fetch or modify data.
+
+3. These API calls are routed through the API component, which handles the request processing, data retrieval, and response formatting.
+
+4. Throughout this process, the Auth component ensures that the user is authenticated and authorized to perform the requested actions.
+
+5. The API component may also be used directly by external systems or scripts for automated interactions with Sentry.
 
 ### Example Flow:
 

@@ -1,5 +1,5 @@
 ---
-title: 3.8 Monitoring (sentry/monitoring) k
+title: Monitoring (sentry/monitoring)
 ---
 ### Overview:&nbsp;
 

@@ -1,5 +1,5 @@
 ---
-title: 3.6 Analytics (sentry/analytics)
+title: Analytics (sentry/analytics)
 ---
 ### Overview:&nbsp;
 
