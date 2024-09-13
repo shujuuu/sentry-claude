@@ -1,6 +1,6 @@
 {
   "generator": "docusaurus",
-  "url": "https://example.test/",
+  "url": "https://shujuuu/sentry-claude/",
   "docs": {
     "overview.t8jad8gh.sw.md": "",
     "web-module.ieqty71c.sw.md": "Module / Web",
@@ -27,7 +27,7 @@
     "additional-resources.7zesovae.sw.md": ""
   },
   "config": {
-    "title": "Swimm Docs",
+    "title": "Sentry (Claude)",
     "tagline": "Get started in minutes"
   }
 }
