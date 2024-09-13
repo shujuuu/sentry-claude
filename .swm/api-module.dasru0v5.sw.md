@@ -1,5 +1,5 @@
 ---
-title: Sentry API Module
+title: API Module
 ---
 ## 1\. Overview
 

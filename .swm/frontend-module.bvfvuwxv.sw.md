@@ -1,5 +1,5 @@
 ---
-title: Sentry Frontend Module
+title: Frontend Module
 ---
 ## 1\. Overview
 
