@@ -3,7 +3,6 @@
   "url": "https://shujuuu/sentry-claude/",
   "docs": {
     "overview.t8jad8gh.sw.md": "",
-    "modernization-dashboard.syb66d5b.sw.md": "",
     "web-module.ieqty71c.sw.md": "By Module/Web",
     "api-module.dasru0v5.sw.md": "By Module/Web",
     "frontend-module.bvfvuwxv.sw.md": "By Module/Web",
@@ -20,6 +19,7 @@
     "flow-api-request-handling.5ezvu9x9.sw.md": "By Flow/Web",
     "class-authenticationbackend.l3cgijqk.sw.md": "By Class/Web",
     "class-apiview.2caxb5j7.sw.md": "By Class/Web",
+    "modernization-dashboard.syb66d5b.sw.md": "",
     "glossary.be2fzwhy.sw.md": "",
     "build-tools.87ztd8xv.sw.md": "",
     "api-reference.ucupz1t7.sw.md": "",
